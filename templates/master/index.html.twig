@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+ <div class="container">
+        <br>
+        <br>
+         <p>   {{message}} </p>
+        {# <p> {{echo message }}</p> #}
+    
+
+    <form action="{{ path('master') }}" method="post">
+
+        <input type="text" name="message" placeholder="message">
+        <button class="btn btn-primary" type="submit">Log message</button>
+    </form>
+    </div>
+{% endblock %}

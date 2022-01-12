@@ -23,6 +23,10 @@
 -//Log the data to your file using file_put_contents.
 - file_put_contents($pathToFile, $data, FILE_APPEND);
 
+- ./bin/console cache:clear
+
+
+
 
 
 
