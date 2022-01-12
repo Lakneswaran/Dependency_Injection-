@@ -40,7 +40,7 @@ class MasterController extends AbstractController
 
                 }
 
-               elseif($className === 'Change'){
+               if($className === 'Change'){
                     $master = new Master($change,$log);
                  $message= $master->transform($message);
                    $master->log($message);

@@ -13,6 +13,10 @@
     <form action="{{ path('master') }}" method="post">
 
         <input type="text" name="message" placeholder="message">
+        <select name="classNames" id="classNames">
+            <option value="Capital">Capital</option>
+            <option value="Change">SpacesDashes</option>
+        </select>
         <button class="btn btn-primary" type="submit">Log message</button>
     </form>
     </div>
