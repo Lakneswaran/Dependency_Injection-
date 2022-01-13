@@ -7,13 +7,17 @@ class Capital implements Transform{
 
     public function transform(string $inputValue): string
     {
-        $pattern = '/(\w+) (\d+), (\d+)/i';
-        $replacement = strtolower('$1').strtoupper('$2');
-        $string = preg_replace($pattern, $replacement, $inputValue);
-        // $string = preg_replace_callback('/(\w)(.)?/e', "strtolower('$1').strtoupper('$2')", $inputValue);
-        return $string;
-    }
+        for ($i = 0; $i < strlen($inputValue); $i++) {
+            if ($i % 2 != 0) {
+                $inputValue[$i] = strtoupper($inputValue[$i]);
+            }
+        }
+        return $inputValue;
 
-}
+         }
+    
+}   
+
+
 
 
